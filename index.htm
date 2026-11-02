@@ -8,6 +8,6 @@
 <body>
   <h1 data-repo-name>linkedin-bold</h1>
   <p>Drag this link to your bookmarks bar to install the bookmarklet.</p>
-  <a id="target" href="javascript:alert(document.title)%3B">Install bookmarklet</a>
+  <a id="target" href="javascript:(()%3D%3E%7Bvar%20e%3B(e%3DgetSelection()).rangeCount%26%26!e.isCollapsed%26%26document.activeElement.isContentEditable%3Fdocument.execCommand(%22bold%22)%3Aalert(%22Select%20some%20text%20in%20the%20editor%20first.%22)%7D)()%3B">Install bookmarklet</a>
 </body>
 </html>
