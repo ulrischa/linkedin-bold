@@ -3,12 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title data-repo-name>linkedin-bold</title>
+  <title>LinkedIn Bold · Bookmarklet</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%3E%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2220%22%20fill%3D%22%231177cc%22%2F%3E%3Ctext%20x%3D%2264%22%20y%3D%2298%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2298%22%20fill%3D%22white%22%3EB%3C%2Ftext%3E%3C%2Fsvg%3E">
+  <link rel="stylesheet" href="https://unpkg.com/@knadh/oat/oat.min.css">
+  <style>
+    body { margin: 0; background: #eff4f8; color: #152d43; font-family: system-ui, sans-serif; }
+    main { max-width: 42rem; margin: clamp(2rem, 9vh, 6rem) auto; padding: 0 1rem; }
+    article { padding: clamp(1.25rem, 5vw, 3rem); background: white; border: 1px solid #d2dee8; border-radius: 1rem; box-shadow: 0 .75rem 2.5rem #1739550c; }
+    header { display: flex; gap: 1rem; align-items: center; }
+    header img { width: clamp(3rem, 9vw, 4.5rem); height: auto; }
+    header small { color: #42627a; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: .15rem 0 0; font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.05; }
+    .intro { margin: 1.5rem 0; font-size: 1.15rem; }
+    #target { display: inline-flex; padding: .7rem 1.15rem; border-radius: .5rem; background: #075fa8; color: white; font-weight: 700; text-decoration: none; }
+    #target:hover { background: #084c83; }
+    :focus-visible { outline: 3px solid #1177cc; outline-offset: 3px; }
+    details { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #d2dee8; }
+    summary { cursor: pointer; font-weight: 650; }
+    .explain { margin-top: 1rem; }
+  </style>
 </head>
 <body>
-  <h1 data-repo-name>linkedin-bold</h1>
-  <p>Drag this link to your bookmarks bar to install the bookmarklet.</p>
-  <a id="target" href="javascript:(()%3D%3E%7Bvar%20e%3B(e%3DgetSelection()).rangeCount%26%26!e.isCollapsed%26%26document.activeElement.isContentEditable%3Fdocument.execCommand(%22bold%22)%3Aalert(%22Select%20some%20text%20in%20the%20editor%20first.%22)%7D)()%3B">Install bookmarklet</a>
+<main>
+<article>
+  <header>
+    <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%3E%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2220%22%20fill%3D%22%231177cc%22%2F%3E%3Ctext%20x%3D%2264%22%20y%3D%2298%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2298%22%20fill%3D%22white%22%3EB%3C%2Ftext%3E%3C%2Fsvg%3E" alt="" width="128" height="128">
+    <div><small>Browser bookmarklet</small><h1>LinkedIn Bold</h1></div>
+  </header>
+  <p class="intro">Select text in the LinkedIn editor, then run the bookmarklet to toggle <strong>bold</strong>.</p>
+  <a class="button" id="target" href="javascript:(()%3D%3E%7Bvar%20e%3B(e%3DgetSelection()).rangeCount%26%26!e.isCollapsed%26%26document.activeElement.isContentEditable%3Fdocument.execCommand(%22bold%22)%3Aalert(%22Select%20some%20text%20in%20the%20editor%20first.%22)%7D)()%3B">LinkedIn Bold</a>
+  <p>Drag the blue link to your bookmarks bar. On mobile, follow the steps below.</p>
 
 <details>
   <summary>How to install a bookmarklet</summary>
@@ -78,5 +102,7 @@
 
         </div>
 </details>
+</article>
+</main>
 </body>
 </html>
