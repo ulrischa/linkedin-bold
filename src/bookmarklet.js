@@ -1,1 +1,1 @@
-alert(document.title);
+javascript:(()=>{const selection=getSelection();if(!selection.rangeCount||selection.isCollapsed||!document.activeElement.isContentEditable)return alert('Select some text in the editor first.');document.execCommand('bold')})()
